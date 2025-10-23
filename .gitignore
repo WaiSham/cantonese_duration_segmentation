@@ -1,6 +1,12 @@
+!data/corpus/processed
+!data/corpus/raw
+!out/acoustic_model
+!out/aligned_corpus
+!out/alignment_samples
+!out/word_num_pair
+
 data/corpus/processed/**
 data/corpus/raw/**
-data/*.xlsx
 out/acoustic_model/*
 out/aligned_corpus/**
 out/alignment_samples/**
