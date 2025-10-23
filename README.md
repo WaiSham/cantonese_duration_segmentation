@@ -15,7 +15,7 @@
 	- run `conda activate base_roger` if needed
 
 1. run `python src/read_xlsx.py` to obtain word_num to word pair csv.
-	- requirement: please follow the format in `data/Stimuli_v2_23 Jan 2020.xlsx`
+	- requirement: please follow the format in `data/sample.xlsx`
 
 2. run `cp data/corpus/raw/Subject\ ${subject_number}/\*/\*.wav data/corpus/processed/Subject_${subject_number}` for all the Subjects
 	- i.e. for each speaker, copy all the audio files under `processed/${your_speaker}`
