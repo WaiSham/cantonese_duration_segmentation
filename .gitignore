@@ -10,4 +10,5 @@ data/corpus/raw/**
 out/acoustic_model/*
 out/aligned_corpus/**
 out/alignment_samples/**
+out/alignment_statistics/*
 out/word_num_pair/**
