@@ -1,13 +1,13 @@
 # Background
-- the research provided audio data with 3 speakers, each audio data contains 2 chinese characters.
+- the audio data should be separated into different speakers, each audio data should contain 2 chinese characters.
 - the structure are as follow:
-	- subject (number)
-		- Naming_set_(number)(session)
-			- audio datas with (wordnum) attached
+	- speaker (number)
+		- session (if exists, only matters in copying stage)
+			- audio datas with (wordnum) attached in the filename
 - also provided .xlsx file storing wordnum and session respectively
 
 ## Steps to process the data
-**Assumed working dir is outermost one (i.e. edu_dept_fa_large)**
+**Assumed working dir is outermost one (i.e. cantonese_duration_segmentation)**
 
 0. assumed that you have conda (a virtual environment management tool), and python installed already
 	- environment are stored in `env`. run `conda env create -f {your_path_to_the_environment}`
@@ -18,6 +18,7 @@
 	- requirement: please follow the format in `data/Stimuli_v2_23 Jan 2020.xlsx`
 
 2. run `cp data/corpus/raw/Subject\ ${subject_number}/\*/\*.wav data/corpus/processed/Subject_${subject_number}` for all the Subjects
+	- i.e. for each speaker, copy all the audio files under `processed/${your_speaker}`
 	- rename the subject folder to remove space, this will helpful for the scripts afterwards
 
 3. run `python src/create_lab.py` to make .lab speech script files containing space-separated string of words
